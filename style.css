@@ -34,3 +34,35 @@
   color: white;
   background-color: black;
 }
+
+
+
+
+footer{
+  background-color: rgb(29, 29, 29);
+}
+#formSubscribe{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#titleSubscribe{
+  text-align: center;
+  color: rgb(255, 68, 66);
+}
+#titleFooter{
+  color: rgb(152, 154, 153);
+}
+#connectus{
+  color: rgb(152, 154, 153);
+  font-weight: bold;
+  text-align: center;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+
+
