@@ -1,8 +1,11 @@
-.jumbotron {
+.jumbotron img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
+}
+
+.info {
+  margin-top: -2.6%;
 }
 
 #genre {
@@ -35,26 +38,23 @@
   background-color: black;
 }
 
-
-
-
-footer{
+footer {
   background-color: rgb(29, 29, 29);
 }
-#formSubscribe{
+#formSubscribe {
   display: block;
   margin: auto;
   text-align: center;
 }
-#titleSubscribe{
+#titleSubscribe {
   text-align: center;
   margin-top: 2rem;
   color: rgb(255, 68, 66);
 }
-#titleFooter{
+#titleFooter {
   color: rgb(152, 154, 153);
 }
-#connectus{
+#connectus {
   color: rgb(152, 154, 153);
   font-weight: bold;
   text-align: center;
