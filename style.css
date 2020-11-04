@@ -48,6 +48,7 @@ footer{
 }
 #titleSubscribe{
   text-align: center;
+  margin-top: 2rem;
   color: rgb(255, 68, 66);
 }
 #titleFooter{
@@ -57,12 +58,25 @@ footer{
   color: rgb(152, 154, 153);
   font-weight: bold;
   text-align: center;
+  margin-bottom: 2%;
 }
 .back-to-top {
   position: fixed;
   bottom: 25px;
   right: 25px;
   display: none;
+}
+.film2019{
+  padding-bottom: -15px;
+  width: 125%;
+}
+.btnreview{
+  border: gray solid 0px;
+  color: rgb(192, 192, 192);
+  font-weight: 600;
+  background-color: rgb(66, 66, 66);
+  margin-bottom: 2%;
+  
 }
 
 
