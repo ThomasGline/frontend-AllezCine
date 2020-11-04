@@ -1,7 +1,36 @@
 .jumbotron {
-  min-height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#genre {
+  padding: 0.4em;
+  background-color: #e33131;
+  color: white;
+}
+
+.btntop {
+  background-color: #e33131;
+  color: white;
 }
 
 .red {
-  color: red;
+  color: #e33131;
+}
+
+.info {
+  display: flex;
+  background-color: #e33131;
+}
+
+#register {
+  color: white;
+  background-color: black;
+}
+
+#login {
+  color: white;
+  background-color: black;
 }
