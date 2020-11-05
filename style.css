@@ -2,6 +2,64 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin: 0;
+}
+
+.bor {
+  border: 7px solid white;
+  border-radius: 50%;
+}
+
+.twitter {
+  border: 3px solid #25b4e6;
+  background-color: #25b4e6;
+  transition: all 1s;
+  width: 50%;
+  color: white;
+}
+
+.twitter:hover {
+  width: 75%;
+  transform: translate(3em, 0);
+}
+
+.facebook {
+  border: 3px solid #1a4cea;
+  background-color: #1a4cea;
+  transition: all 1s;
+  width: 50%;
+  color: white;
+}
+
+.facebook:hover {
+  width: 75%;
+  transform: translate(3em, 0);
+}
+
+.dribble {
+  border: 3px solid #eb84c9;
+  background-color: #eb84c9;
+  transition: all 1s;
+  width: 50%;
+  color: white;
+}
+
+.dribble:hover {
+  width: 75%;
+  transform: translate(3em, 0);
+}
+
+.google {
+  border: 3px solid #ea1a1a;
+  background-color: #ea1a1a;
+  transition: all 1s;
+  width: 50%;
+  color: white;
+}
+
+.google:hover {
+  width: 75%;
+  transform: translate(3em, 0);
 }
 
 #genre {
