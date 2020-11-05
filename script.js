@@ -37,9 +37,60 @@ const url = 'https://api.themoviedb.org/3/search/movie?api_key=a2ccba0e981edfbbb
 const buttonElement = document.querySelector('#search');
 const inputElement = document.querySelector('#inputValue');
 
+
+/*function createMovieContainer(movies) {
+    const movieTemplate = `
+    <div class="col-2">
+        <div class="card">
+            ${movies.map((movie) => {
+        return `
+                <img class="card-img-top" src=${movie.poster_path} data-movie-id=${movie.id}>
+                `;
+    })}
+            <img class="card-img-top" src="img/god.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">God's Compass</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>
+    `;
+    movieEleme
+}*/
+
+
+
 buttonElement.onclick = function (event) {
     event.preventDefault();
     const value = inputElement.value;
+
+    const newUrl = url + '&query=' + value;
+
+    fetch(newUrl)
+        .then((res) => res.json())
+        .then((data) => {
+            // data.results []
+            console.log('Data : ', data);
+        })
+        .catch((error) => {
+            console.log('Error : ', error);
+        });
+    inputElement.value = '';
+    console.log('Value : ', value);
+}
+
+let image;
+let title;
+let year;
+let style;
+//const card = document.querySelector('.container .row .')
+
+let specurl = 'https://api.themoviedb.org/3/movie/popular?api_key=a2ccba0e981edfbbb30762594da0816b';
+
+document.getElementById('btnAction').addEventListener('click', function () {
+    //event.preventDefault();
+    const value = 'action';
 
     const newUrl = url + '&query=' + value;
 
@@ -53,4 +104,56 @@ buttonElement.onclick = function (event) {
         });
     inputElement.value = '';
     console.log('Value : ', value);
+
+    document.getElementById('test').innerHTML += `
+    <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="img/god.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">God's Compass</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+    console.log('coucou');
+})
+
+
+function generateFirstCard() {//Fonction qui génère les 5 premières card
+    let counter = 5;
+    while (counter >= 1) {
+        document.getElementById('firstMovie').innerHTML += `
+        <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="img/citizen.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Citizen Soldier</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+        counter--;
+    }
 }
+generateFirstCard();
+
+function generateFeatureCard() {//Fonction qui génère les card de feature
+    let counter = 12;
+    while (counter >= 1) {
+        document.getElementById('featureMovies').innerHTML += `
+        <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="img/citizen.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Citizen Soldier</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+        counter--;
+    }
+}
+generateFeatureCard();
