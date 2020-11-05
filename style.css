@@ -54,7 +54,7 @@
   background-color: #ea1a1a;
   transition: all 1s;
   width: 50%;
-  color: black;
+  color: white;
 }
 
 .google:hover {
@@ -130,4 +130,24 @@ footer {
   font-weight: 600;
   background-color: rgb(66, 66, 66);
   margin-bottom: 2%;
+}
+#btnContact {
+  background-color: #e33131;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-bottom: 2%;
+  padding: 1%;
+  border: gray solid 0px;
+  border-radius: 4px;
+}
+#btnSubscribe {
+  background-color: #e33131;
+  border: gray solid 0px;
+  color: white;
+}
+#search {
+  background-color: #e33131;
+  border: gray solid 0px;
+  color: white;
 }
