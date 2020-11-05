@@ -1,7 +1,8 @@
-///variable
+///variable test
 let identifiant;
 let email;
 let movies;
+
 
 //alerte box cookie
 confirm('Attention ! Nous utilisons des cookies pour stocker et accéder à des informations personnelles comme votre visite sur ce site.');
