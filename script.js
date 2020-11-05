@@ -13,7 +13,7 @@ function login() {//form login
 }
 
 //button scroll page-up
-$(document).ready(function () {
+/*$(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
@@ -28,7 +28,7 @@ $(document).ready(function () {
         }, 400);
         return false;
     });
-});
+});*/
 
 const API_KEY = 'a2ccba0e981edfbbb30762594da0816b';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=a2ccba0e981edfbbb30762594da0816b';
@@ -51,5 +51,6 @@ buttonElement.onclick = function (event) {
         .catch((error) => {
             console.log('Error : ', error);
         });
+    inputElement.value = '';
     console.log('Value : ', value);
 }
