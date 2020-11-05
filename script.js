@@ -114,3 +114,40 @@ function createMovieContainer(movies) {
     movieElement.innerHTML = movieTemplate;
     return movieElement;
 }
+function generateFirstCard() {//Fonction qui génère les 5 premières card
+    let counter = 5;
+    while (counter >= 1) {
+        document.getElementById('firstMovie').innerHTML += `
+        <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="img/citizen.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Citizen Soldier</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+        counter--;
+    }
+}
+generateFirstCard();
+
+function generateFeatureCard() {//Fonction qui génère les card de feature
+    let counter = 12;
+    while (counter >= 1) {
+        document.getElementById('featureMovies').innerHTML += `
+        <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="img/citizen.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Citizen Soldier</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+        counter--;
+    }
+}
+generateFeatureCard();
