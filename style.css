@@ -5,11 +5,6 @@
   margin: 0;
 }
 
-<<<<<<< HEAD
-/*.info {
-  margin-top: -2.6%;
-}*/
-=======
 .bor {
   border: 7px solid white;
   border-radius: 50%;
@@ -66,7 +61,6 @@
   width: 75%;
   transform: translate(3em, 0);
 }
->>>>>>> philippe
 
 #genre {
   padding: 0.4em;
