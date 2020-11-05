@@ -2,17 +2,21 @@
 let identifiant;
 let email;
 
+//alerte box cookie
+confirm('Attention ! Nous utilisons des cookies pour stocker et accéder à des informations personnelles comme votre visite sur ce site.');
 
-function register() {
+
+function register() {//form register
     identifiant = document.getElementById('registerIdentifiant').value;
     email = document.getElementById('registerEmail').value;
     alert("Your account has been created. \nYour identifiant : " + identifiant + "\nYour email : " + email);
 }
-function login() {
+function login() {//form login
     identifiant = document.getElementById('loginIdentifiant').value;
     alert('Hello ' + identifiant + ". You are connected.");
 }
 
+//button scroll page-up
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
@@ -29,3 +33,15 @@ $(document).ready(function () {
         return false;
     });
 });
+
+const API_KEY = 'a2ccba0e981edfbbb30762594da0816b';
+
+//button search
+const buttonElement = document.querySelector('#search');
+const inputElement = document.querySelector('#inputValue');
+
+buttonElement.onclick = function (event) {
+    event.preventDefault();
+    const value = inputElement.value;
+    console.log('Value : ' + value);
+}
