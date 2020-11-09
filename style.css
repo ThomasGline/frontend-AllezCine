@@ -1,6 +1,9 @@
 .caroussel {
   margin-top: -10rem;
 }
+.caroussel img{
+  background-size: cover;
+}
 
 .vertical-line {
   border-left: 4px solid #e33131;
