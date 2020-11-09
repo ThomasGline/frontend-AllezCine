@@ -152,3 +152,22 @@ function generateFeatureCard() {//Fonction qui génère les card de feature
     }
 }
 generateFeatureCard();
+
+function generateShopCard() {//Fonction qui génère les card de feature
+    let counter = 8;
+    while (counter >= 1) {
+        document.getElementById('ShopMovies').innerHTML += `
+        <div class="col-3">
+        <div class="card">
+            <img class="card-img-top" src="img/citizen.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Citizen Soldier</h5>
+                <p class="card-text">2016</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+        counter--;
+    }
+}
+generateShopCard();
