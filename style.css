@@ -1,9 +1,6 @@
 .caroussel {
   margin-top: -10rem;
 }
-.caroussel img{
-  background-size: cover;
-}
 
 .caroussel img {
   width: 500px;
