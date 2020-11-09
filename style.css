@@ -2,6 +2,15 @@
   margin-top: -10rem;
 }
 
+.caroussel img {
+  width: 500px;
+  height: 300px;
+}
+
+nav {
+  z-index: 1000;
+}
+
 .vertical-line {
   border-left: 4px solid #e33131;
   display: inline;

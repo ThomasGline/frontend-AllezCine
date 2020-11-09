@@ -56,35 +56,77 @@
     
     <section class="caroussel jumbotron-fluid">
         <h1><span class="red">ALLEZ</span>CINE!</h1>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="img/alien.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/joker.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/JurassicPark.jpg" alt="Third slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/avenger.jpg" alt="Four slide">
-                        </div>
+        <!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-uppercase">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="red">Home</span><span
+                    class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+                        <span id="genre">genre</span>
+    
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" id="action" href="#">Action</a>
+                        <a class="dropdown-item" id="comedy" href="#">Comedy</a>
+                        <a class="dropdown-item" id="western" href="#">Western</a>
+                        <a class="dropdown-item" id="fiction" href="#">Fiction</a>
                     </div>
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="inputValue" type="search" placeholder="Search"
+                        aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit"><i
+                            class="fas fa-search"></i></button>
+                    </form>
+        </div>
+    </nav>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/alien.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/joker.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/JurassicPark.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/avenger.jpg" alt="Four slide">
+                </div>
             </div>
+        </div>
 
-            <div class="jumbotron-heading d-inline-block p-4">
-                <h2 class="new">Latest <span class="red">on</span>line <span class="red">mo</span>vie
-                </h2>
-                <p>In space no one can hear your scream</p>
-                <button class="btntop">Watch Trailer</button>
-            </div>
+        <div class="jumbotron-heading d-inline-block p-4">
+            <h2 class="new">Latest <span class="red">on</span>line <span class="red">mo</span>vie
+            </h2>
+            <p>In space no one can hear your scream</p>
+            <button class="btntop">Watch Trailer</button>
+        </div>
         <div class="info">
             <i class="fas fa-phone-alt"></i>
             <p id="tel">(+000) 009 455 4088</p>
