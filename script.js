@@ -87,7 +87,7 @@ function createMovieContainer(movies) {
     movieElement.innerHTML = movieTemplate;
     return movieElement;
 }*/
-function generateFirstCard() {//Fonction qui génère les 5 premières card
+/*function generateFirstCard() {//Fonction qui génère les 5 premières card
     let counter = 5;
     while (counter >= 1) {
         document.getElementById('firstMovie').innerHTML += `
@@ -106,7 +106,7 @@ function generateFirstCard() {//Fonction qui génère les 5 premières card
 }
 generateFirstCard();
 
-function generateFeatureCard() {//Fonction qui génère les card de feature
+/*function generateFeatureCard() {//Fonction qui génère les card de feature
     let counter = 12;
     while (counter >= 1) {
         document.getElementById('featureMovies').innerHTML += `
@@ -123,9 +123,9 @@ function generateFeatureCard() {//Fonction qui génère les card de feature
         counter--;
     }
 }
-generateFeatureCard();
+generateFeatureCard();*/
 
-function generateShopCard() {//Fonction qui génère les card de shop
+/*function generateShopCard() {//Fonction qui génère les card de shop
     let counter = 8;
     while (counter >= 1) {
         document.getElementById('ShopMovies').innerHTML += `
@@ -142,7 +142,7 @@ function generateShopCard() {//Fonction qui génère les card de shop
         counter--;
     }
 }
-generateShopCard();
+generateShopCard();*/
 
 
 const MOVIE_DB_API = 'a2ccba0e981edfbbb30762594da0816b';
@@ -151,7 +151,9 @@ const MOVIE_DB_IMAGE_ENDPOINT = 'https://image.tmdb.org/t/p/w500';
 const DEFAULT_POST_IMAGE = 'https://via.placeholder.com/150';
 
 // API information.
-const apiUrl = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
+const discoverUrl = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
+const popularUrl = 'https://api.themoviedb.org/3/movie/top_rated?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
+const firstMovie = 'https://api.themoviedb.org/3/movie/now_playing?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCHAPI =
     "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
@@ -159,13 +161,16 @@ const SEARCHAPI =
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+
 /* call the showMovies function that requests the movie data from the Api using fetch.
  Then it puts those data in the main HTML tag by creating elments for those data. */
 
-showMovies(apiUrl);
+firstMovies(firstMovie);
+featureMovies(discoverUrl);
+shopMovies(popularUrl);
 
 
-function showMovies(url) {
+function featureMovies(url) {
     fetch(url).then(res => res.json())
         .then(function (data) {
             data.results.forEach(element => {
@@ -177,6 +182,8 @@ function showMovies(url) {
                 console.log('test img', image);
                 console.log('test h2', text);
 
+                let moviestest = [element.title];
+                console.log(moviestest);
                 text.innerHTML = `${element.title}`;
                 image.src = IMGPATH + element.poster_path;
                 document.getElementById('featureMovies').innerHTML += `
@@ -185,7 +192,7 @@ function showMovies(url) {
             <img class="card-img-top" src="${image.src}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${element.title}</h5>
-                <p class="card-text">2016</p>
+                <p class="card-text">${element.release_date}</p>
                 <p class="card-text">genre</p>
             </div>
         </div>
@@ -196,3 +203,63 @@ function showMovies(url) {
 
 
 
+
+function shopMovies(url) {
+    fetch(url).then(res => res.json())
+        .then(function (data) {
+            data.results.forEach(element => {
+                // Creating elemnts for our data inside the main tag.
+                const el = document.createElement('div');
+                const image = document.createElement('img');
+                const text = document.createElement('h2');
+                console.log('test el', el);
+                console.log('test img', image);
+                console.log('test h2', text);
+
+                text.innerHTML = `${element.title}`;
+                image.src = IMGPATH + element.poster_path;
+                document.getElementById('ShopMovies').innerHTML += `
+        <div class="col-3">
+        <div class="card">
+            <img class="card-img-top" src="${image.src}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">${element.title}</h5>
+                <p class="card-text">${element.release_date}</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+            });
+        });
+}
+
+
+
+function firstMovies(url) {
+    fetch(url).then(res => res.json())
+        .then(function (data) {
+            data.results.forEach(element => {
+                // Creating elemnts for our data inside the main tag.
+                const el = document.createElement('div');
+                const image = document.createElement('img');
+                const text = document.createElement('h2');
+                console.log('test el', el);
+                console.log('test img', image);
+                console.log('test h2', text);
+
+                text.innerHTML = `${element.title}`;
+                image.src = IMGPATH + element.poster_path;
+                document.getElementById('firstMovie').innerHTML += `
+        <div class="col-2">
+        <div class="card">
+            <img class="card-img-top" src="${image.src}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">${element.title}</h5>
+                <p class="card-text">${element.release_date}</p>
+                <p class="card-text">genre</p>
+            </div>
+        </div>
+    </div>`;
+            });
+        });
+}

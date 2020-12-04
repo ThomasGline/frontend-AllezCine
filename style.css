@@ -31,12 +31,14 @@ nav {
   top: 0;
   padding-right: 4px;
   padding-left: 20px;
+  vertical-align: middle;
 }
 
 .twitter:hover {
   transform: translate(4em, 0);
   text-decoration: none;
   color: white;
+  vertical-align: middle;
 }
 
 .facebook {
